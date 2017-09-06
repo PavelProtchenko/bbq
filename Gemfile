@@ -15,7 +15,9 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'rails_12factor'
+gem 'devise-i18n'
+
+gem 'rails-i18n'
 
 gem 'jquery-rails'
 
