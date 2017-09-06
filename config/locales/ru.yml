@@ -34,3 +34,6 @@ ru:
     one: '%{count} ошибка'
     few: '%{count} ошибки'
     many: '%{count} ошибок'
+  events:
+    show:
+      destroy_event: 'Вы уверены?'
