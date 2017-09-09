@@ -1,6 +1,5 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
-
   before_action :set_event, only: [:show]
   before_action :set_current_user_event, only: [:edit, :update, :destroy]
 
@@ -13,6 +12,8 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @new_comment = @event.comments.build(params[:comment])
+    @new_subscription = @event.subscriptions.build(params[:subscription])
   end
 
   # GET /events/new
@@ -25,19 +26,14 @@ class EventsController < ApplicationController
   end
 
   # POST /events
-  # POST /events.json
   def create
     @event = current_user.events.build(event_params)
 
-    respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: I18n.t('controllers.events.created') }
-        format.json { render :show, status: :created, location: @event }
+        redirect_to @event, notice: I18n.t('controllers.events.created')
       else
-        format.html { render :new }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
+        render :new
       end
-    end
   end
 
   # PATCH/PUT /events/1
@@ -45,11 +41,9 @@ class EventsController < ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to @event, notice: I18n.t('controllers.events.updated') }
-        format.json { render :show, status: :ok, location: @event }
+        redirect_to @event, notice: I18n.t('controllers.events.updated')
       else
-        format.html { render :edit }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
+        render :edit
       end
     end
   end
@@ -59,8 +53,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to events_url, notice: I18n.t('controllers.events.destroyed') }
-      format.json { head :no_content }
+      redirect_to events_url, notice: I18n.t('controllers.events.destroyed')
     end
   end
 

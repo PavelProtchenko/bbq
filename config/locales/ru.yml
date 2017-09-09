@@ -27,6 +27,15 @@ ru:
       destroyed: 'Вы удалили мероприятие :('
     users:
       updated: 'Вы обновили свой профиль'
+    comments:
+      destroyed: 'Комментарий удален'
+      created: 'Ваш комментарий добавлен'
+      error: 'Ошибка с комментарием'
+    subscription:
+      created: 'Вы подписаны на это событие'
+      destoyed: 'Участник отписан'
+      error: 'Подписка/отписка не сработала'
+
   app:
     name: 'Шашлыки'
     company: 'Хороший программист'
@@ -37,3 +46,11 @@ ru:
   events:
     show:
       destroy_event: 'Вы уверены?'
+
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
+
+  subscriptions:
+    subscription:
+      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
