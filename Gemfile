@@ -21,7 +21,7 @@ gem 'rails-i18n'
 
 gem 'jquery-rails'
 
-gem 'saas-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0'
 
 gem 'lightbox-bootstrap-rails', '5.1.0.1'
 
