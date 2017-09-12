@@ -23,6 +23,8 @@ gem 'jquery-rails'
 
 gem 'sass-rails', '~> 5.0'
 
+gem 'turbolinks'
+
 gem 'lightbox-bootstrap-rails', '5.1.0.1'
 
 gem 'twitter-bootstrap-rails'
