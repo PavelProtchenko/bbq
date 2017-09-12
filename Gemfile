@@ -19,7 +19,7 @@ gem 'devise-i18n'
 
 gem 'rails-i18n'
 
-gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 gem 'sass-rails', '~> 5.0'
 
