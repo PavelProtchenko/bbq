@@ -13,7 +13,7 @@
 //= require rails-ujs
 //= require_tree .
 //= require turbolinks
-//= require jquery
+//= require jquery-ui-rails
 //= require jquery_ujs
 //= require twitter/bootstrap
 $.turbo.use('turbolinks:load', 'turbolinks:request-start')
