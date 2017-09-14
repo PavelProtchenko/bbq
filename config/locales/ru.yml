@@ -18,10 +18,6 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
-    errors:
-      messages:
-        existed_email: 'Уже используется'
-        self_event_subscription: 'Нельзя подписаться - это ваше событие'
 
   # Перевод сообщений, которые отправляет контроллер
   controllers:
