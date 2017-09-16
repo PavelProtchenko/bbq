@@ -46,7 +46,7 @@
     </div>
 
     <div class="col-md-4">
-      <div class="user-owner">
+      <div class="event-owner">
         <h4>Зовет:</h4>
         <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
@@ -57,18 +57,18 @@
             <%= render(
               partial: 'subscriptions/subscription',
               collection: @event.subscriptions.except(@new_subscription)
-              ) %>
+              )%>
           </p>
         </div>
       </div>
-      <% unless @event.user == current_user %>
+      <% unless @event.user == current_user || @event.subscribers == current_user %>
       <div class="event-subscription-form">
         <h4>Я пойду:</h4>
         <div>
           <%= render partial: 'subscriptions/form', locals: {subscription: @new_subscription || @event.subscriptions.build} %>
-      <% end %>
         </div>
       </div>
+      <% end %>
     </div>
   </div>
 

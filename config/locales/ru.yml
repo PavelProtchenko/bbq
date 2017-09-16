@@ -18,6 +18,16 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+      subscription:
+        user_name: 'Имя'
+        user_email: 'Email'
+      comment:
+        body: 'Комментарий'
+        user_name: 'Имя'
+    errors:
+      messages:
+        email_exist: 'Используется другим пользователем'
+        self_event_subscription: "Нельзя подписаться на собственное событие"
 
   # Перевод сообщений, которые отправляет контроллер
   controllers:
@@ -33,7 +43,7 @@ ru:
       error: 'Ошибка с комментарием'
     subscription:
       created: 'Вы подписаны на это событие'
-      destoyed: 'Участник отписан'
+      destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
 
   app:
@@ -54,3 +64,19 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
