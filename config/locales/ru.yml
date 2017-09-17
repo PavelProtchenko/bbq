@@ -7,6 +7,7 @@ ru:
       event: 'Событие'
       subscription: 'Подписка'
       comment: 'Комментарий'
+      photo: 'Фотка'
 
     # Перевод названий аттрибутов моделей
     attributes:
@@ -27,6 +28,9 @@ ru:
       comment:
         body: 'Комментарий'
         user_name: 'Имя'
+      photo:
+        photo: 'Фотка'
+
     errors:
       messages:
         email_exist: 'Используется другим пользователем'
@@ -55,6 +59,10 @@ ru:
       created: 'Вы подписаны на это событие'
       destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
+    photos:
+      error: 'Что-то не так с фоткой'
+      created: 'Вы добавили фотографию к событию'
+      destroyed: 'Вы удалили фотку'
 
   app:
     name: 'Шашлыки'
