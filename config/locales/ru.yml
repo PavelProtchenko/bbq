@@ -5,6 +5,8 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      subscription: 'Подписка'
+      comment: 'Комментарий'
 
     # Перевод названий аттрибутов моделей
     attributes:
@@ -13,6 +15,7 @@ ru:
         name: 'Имя'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
+        avatar: 'Аватар'
       event:
         title: 'Название'
         address: 'Место проведения'
@@ -28,6 +31,13 @@ ru:
       messages:
         email_exist: 'Используется другим пользователем'
         self_event_subscription: "Нельзя подписаться на собственное событие"
+    notice:
+      minimum_charecters:
+        one: 'Не менее %{count} символа'
+        few: 'Не менее %{count} символов'
+        many: 'Не менее %{count} символов'
+      sign_up: 'Зарегистрироваться'
+      sign_in: 'Войти'
 
   # Перевод сообщений, которые отправляет контроллер
   controllers:
