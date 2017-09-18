@@ -44,7 +44,7 @@ class PhotosController < ApplicationController
       params.fetch(:photo, {}).permit(:photo)
     end
 
-    def notify_photo(event, photot)
+    def notify_photo(event, photo)
       all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq
 
       all_emails.each do |mail|
