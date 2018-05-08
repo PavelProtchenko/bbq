@@ -9,19 +9,19 @@ class SubscriptionsController < ApplicationController
 
     if @new_subscription.save
       EventMailer.subscription(@event, @new_subscription).deliver_now
-      redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
+      redirect_to @event, notice: I18n.t('controllers.subscription.created')
     else
-      render 'events/show', alert: I18n.t('controllers.subscriptions.error')
+      render 'events/show', alert: I18n.t('controllers.subscription.error')
     end
   end
 
   def destroy
-    message = {notice: I18n.t('controllers.subscriptions.destroyed')}
+    message = {notice: I18n.t('controllers.subscription.destroyed')}
 
     if current_user_can_edit?(@subscription)
       @subscription.destroy
     else
-      message = {alert: I18n.t('controllers.subscriptions.error')}
+      message = {alert: I18n.t('controllers.subscription.error')}
     end
 
     redirect_to @event, message
@@ -39,7 +39,7 @@ class SubscriptionsController < ApplicationController
 
     def own_event
       if @event.user == current_user
-        redirect_to @event, notice: I18n.t('controllers.subscriptions.own')
+        redirect_to @event, notice: I18n.t('controllers.subscription.own')
       end
     end
 
