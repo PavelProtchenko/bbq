@@ -66,7 +66,7 @@ ru:
 
   app:
     name: 'Шашлыки'
-    company: 'Хороший программист'
+    company: 'Protchenko Pavel'
   errors:
     one: '%{count} ошибка'
     few: '%{count} ошибки'
