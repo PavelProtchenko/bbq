@@ -47,7 +47,7 @@ class PhotosController < ApplicationController
       all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq
 
       all_emails.each do |mail|
-        EventMailer.photo(event, photo, email).deliver_now
+        EventMailer.photo(event, photo, mail).deliver_now
       end
     end
 end
