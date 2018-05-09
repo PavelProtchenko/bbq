@@ -7,3 +7,8 @@
 <%= t '.event' %>
 <h3><%= @event.title %></h3>
 
+
+<h4><%= l @event.datetime %></h4>
+
+<%= t '.owner' %>
+<h4><%= l @event.user.name %></h4>
